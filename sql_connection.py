@@ -19,9 +19,9 @@ def add_order_sort(food, quantity, price, origin):
 
 def add_spartan(name_of_student, phone_number, course, trainer):
     try:
-            query = f"INSERT INTO sparta_table(name_of_student, phone_number, course, trainer) VALUES('{name_of_student}', {phone_number}, '{course}', '{trainer}');"
-            cursor.execute(query)
-            docker_python_sql.commit()
-            print('The table has been updated, 1 row affected')
+        query = f"INSERT INTO sparta_table(name_of_student, phone_number, course, trainer) VALUES('{name_of_student}', {phone_number}, '{course}', '{trainer}');"
+        cursor.execute(query)
+        docker_python_sql.commit()
+        print('The table has been updated, 1 row affected')
     except:
         print('There has been a error, record has not been committed')
